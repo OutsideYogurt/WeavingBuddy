@@ -1,8 +1,3 @@
-import lib.filemanip as fm
+import lib.wifmanip as wm
 
-print("test")
-
-a = fm.filemanip()
-
-for i in range(10):
-    print(i)
+currentproject = wm.wifmanip("data/Simple_Example.wif")
