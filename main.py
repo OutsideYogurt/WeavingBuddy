@@ -1,5 +1,13 @@
 import lib.wifmanip as wm
+import lib.filemanip as fm
+import json
 
-currentproject = wm.wifmanip("data/Simple_Example.wif")
+mywif = wm.wifmanip("data/notsosimple_exemple.wif")
 
-currentproject.printcategory('PRIVATE PIXELOOM')
+job = {}
+job['wif'] = "data/notsosimple_exemple.wif"
+job['currentstep'] = 1
+job['steps'] = mywif.returnliftplan()
+
+with open('data.job', 'w') as json_file:
+    json.dump(job, json_file, indent=4)

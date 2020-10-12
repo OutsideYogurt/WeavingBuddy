@@ -12,6 +12,7 @@ class wifmanip():
         self.colorpalette = self._fillcategory("[COLOR PALETTE]")
         self.colortable = self._fillcategory("[COLOR TABLE]")
         self.threading = self._fillcategory("[THREADING]")
+        self.liftplan = self._fillcategory("[LIFTPLAN]")
         self.treadling = self._fillcategory("[TREADLING]")
         self.tieup = self._fillcategory("[TIEUP]")
         self.privatepixeloom = self._fillcategory("[PRIVATE PIXELOOM]")
@@ -49,6 +50,8 @@ class wifmanip():
             self.printdict(self.threading)
         elif categoryname.lower() == "treadling":
             self.printdict(self.treadling)
+        elif categoryname.lower() == "liftplan":
+            self.printdict(self.liftplan)
         elif categoryname.lower() == "tieup":
             self.printdict(self.tieup)
         elif categoryname.lower() == "private pixeloom":
@@ -61,3 +64,5 @@ class wifmanip():
         for key in dicttoprint:
             print(key + " = " + dicttoprint[key])
 
+    def returnliftplan(self):
+        return self.liftplan
